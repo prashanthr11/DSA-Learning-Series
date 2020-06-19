@@ -11,10 +11,9 @@ signed main() {
     int t;
     cin >> t;
     while(t--) {
-        set<int> s, s1, s2;
+        set<int> s1;
         int n, sc, x, y;
         cin >> n >> sc >> x >> y;
-        for(auto i = 1; i <= n; ++i)s.insert(i);
         for(auto i = 0; i < x; ++i) {
             int as;
             cin >> as;
@@ -25,9 +24,8 @@ signed main() {
             cin >> q;
             s1.insert(q);
         }
-        set_difference(s.begin(), s.end(), s1.begin(), s1.end(), inserter(s2, s2.end()));
-        cout << (s2.size() > sc? sc :s2.size());
-        cout << endl;
+        int sz = s1.size();
+        cout << min(n - sz, sc) << endl;
     }
     return 0;
 }
