@@ -11,7 +11,7 @@ signed main() {
     int t;
     cin >> t;
     while(t--) {
-        set<int> s1;
+        unordered_set<int> s1;
         int n, sc, x, y;
         cin >> n >> sc >> x >> y;
         for(auto i = 0; i < x; ++i) {
