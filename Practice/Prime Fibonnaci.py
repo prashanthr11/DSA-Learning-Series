@@ -22,13 +22,16 @@ s = set()
 for i in range(a, b + 1):
   if isPrime(i):
     s.add(i)
+
 s2 = set()
 l = list(s)
 l = [str(i) for i in l]
+
 for i in range(len(l)):
   for j in range(len(l)):
     if i != j:
 	    s2.add(int(l[i] + l[j]))
+		
 sts = set()
 for i in s2:
     if isPrime(i):
