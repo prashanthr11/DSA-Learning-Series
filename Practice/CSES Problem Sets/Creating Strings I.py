@@ -1,10 +1,12 @@
-from itertools import permutations
+from itertools import permutations as perm
+
+def solve(s):
+    s = list(set(list(perm(s))))
+    s = [''.join(i) for i in s]
+    print(len(s))
+    for i in sorted(s):
+        print(i)
+
+
 s = input()
-l = list(set(permutations(s)))
-l.sort()
-print(len(l))
-for i in l:
-    s = ''
-    for j in i:
-        s += j
-    print(s)
+solve(s)
